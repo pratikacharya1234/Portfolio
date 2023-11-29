@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: hsla(0, 0%, 0%, 0.685);
+    }
+    h1{
+        text-shadow: black;
+        font-size: 30px;
+    }
+    .calculator {
+      max-width: 250px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 30px 25px 0px black;
+    }
+    .output {
+      font-size: 24px;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      height: 60px;
+      text-align: end;
+    }
+    .btn {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .btn:hover{
+        background-color: aqua;
+    }
+    .btn1 ,.btn2 {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .btn1:hover{
+        background-color: red;
+    }
+    .btn2:hover{
+        background-color: green;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+  <div class="calculator">
+    <div class="output" id="output"></div>
+    <table>
+      <tr>
+        <td><button class="btn" onclick="appendToOutput('7')">7</button></td>
+        <td><button class="btn" onclick="appendToOutput('8')">8</button></td>
+        <td><button class="btn" onclick="appendToOutput('9')">9</button></td>
+        <td><button class="btn1" onclick="clearOutput()">C</button></td>
+      </tr>
+      <tr>
+        <td><button class="btn" onclick="appendToOutput('4')">4</button></td>
+        <td><button class="btn" onclick="appendToOutput('5')">5</button></td>
+        <td><button class="btn" onclick="appendToOutput('6')">6</button></td>
+        <td><button class="btn1" onclick="appendToOutput('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="btn" onclick="appendToOutput('1')">1</button></td>
+        <td><button class="btn" onclick="appendToOutput('2')">2</button></td>
+        <td><button class="btn" onclick="appendToOutput('3')">3</button></td>
+        <td><button class="btn1" onclick="appendToOutput('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="btn" onclick="appendToOutput('0')">0</button></td>
+        <td><button class="btn1" onclick="appendToOutput('.')">.</button></td>
+        <td><button class="btn2" onclick="calculate()">=</button></td>
+        <td><button class="btn1" onclick="appendToOutput('*')">*</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    let output = document.getElementById('output');
+
+    function appendToOutput(value) {
+      output.textContent += value;
+    }
+
+    function clearOutput() {
+      output.textContent = '';
+    }
+
+    function calculate() {
+      try {
+        output.textContent = eval(output.textContent);
+      } catch (error) {
+        output.textContent = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>

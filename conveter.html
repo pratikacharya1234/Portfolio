@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <div class="converter">
+        <div class="input">
+            <label for="value">Value:</label>
+            <input type="number" id="value" step="0.01">
+        </div>
+        <div class="unit">
+            <label for="fromUnit">From:</label>
+            <select id="fromUnit">
+                <option value="km">Kilometers (km)</option>
+                <option value="m">Meters (m)</option>
+                <option value="mph">Miles per Hour (mph)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <!-- SI Units -->
+                <option value="s">Seconds (s)</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="A">Amperes (A)</option>
+                <option value="K">Kelvin (K)</option>
+                <option value="mol">Moles (mol)</option>
+                <option value="cd">Candelas (cd)</option>
+                <option value="m²">Square Meters (m²)</option>
+                <option value="m³">Cubic Meters (m³)</option>
+                <option value="m/s">Meters per Second (m/s)</option>
+                <option value="m/s²">Meters per Second Squared (m/s²)</option>
+                <option value="N">Newtons (N)</option>
+                <option value="J">Joules (J)</option>
+                <option value="W">Watts (W)</option>
+                <option value="Pa">Pascals (Pa)</option>
+                <option value="C">Coulombs (C)</option>
+                <option value="V">Volts (V)</option>
+                <option value="Ω">Ohms (Ω)</option>
+                <option value="Hz">Hertz (Hz)</option>
+                <option value="F">Farads (F)</option>
+                <option value="Wb">Webers (Wb)</option>
+                <option value="H">Henrys (H)</option>
+            </select>
+        </div>
+        <div class="unit">
+            <label for="toUnit">To:</label>
+            <select id="toUnit">
+                <option value="km">Kilometers (km)</option>
+                <option value="m">Meters (m)</option>
+                <option value="mph">Miles per Hour (mph)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <!-- SI Units -->
+                <option value="s">Seconds (s)</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="A">Amperes (A)</option>
+                <option value="K">Kelvin (K)</option>
+                <option value="mol">Moles (mol)</option>
+                <option value="cd">Candelas (cd)</option>
+                <option value="m²">Square Meters (m²)</option>
+                <option value="m³">Cubic Meters (m³)</option>
+                <option value="m/s">Meters per Second (m/s)</option>
+                <option value="m/s²">Meters per Second Squared (m/s²)</option>
+                <option value="N">Newtons (N)</option>
+                <option value="J">Joules (J)</option>
+                <option value="W">Watts (W)</option>
+                <option value="Pa">Pascals (Pa)</option>
+                <option value="C">Coulombs (C)</option>
+                <option value="V">Volts (V)</option>
+                <option value="Ω">Ohms (Ω)</option>
+                <option value="Hz">Hertz (Hz)</option>
+                <option value="F">Farads (F)</option>
+                <option value="Wb">Webers (Wb)</option>
+                <option value="H">Henrys (H)</option>
+            </select>
+        </div>
+        <button id="convertBtn">Convert</button>
+    </div>
+    <div class="result">
+        <p id="resultText"></p>
+    </div>
+    <script src="shop.js"></script>
+</body>
+</html>

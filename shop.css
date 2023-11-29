@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.converter {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input, .unit {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.result {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .converter {
+        width: 90%;
+    }
+
+    .input, .unit {
+        margin: 5px 0;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,111 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    color: brown;
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.tic-tac-toe {
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow rows to wrap on smaller screens */
+}
+
+.box {
+    border: 1px solid brown;
+    height: 100px;
+    width: 100px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 1; /* Take up equal width within a row */
+}
+
+.box.X {
+    color: brown;
+}
+
+.box.O {
+    color: brown;
+}
+
+.result {
+    color: brown;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: beige;
+    color: brown;
+    height: 35px;
+    width: 70px;
+    border: 2px solid brown;
+    margin: 10px auto; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: brown;
+    color: beige;
+    border: 2px solid beige;
+    height: 40px;
+    width: 80px;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 2rem;
+    }
+
+    .box {
+        height: 75px;
+        width: 75px;
+        font-size: 18px;
+    }
+
+    button {
+        height: 30px;
+        width: 60px;
+    }
+
+    button:hover {
+        height: 35px;
+        width: 70px;
+    }
+}
+
+/* Media Query for Tablet */
+@media (max-width: 1024px) {
+    header {
+        font-size: 2.5rem;
+    }
+
+    .box {
+        height: 85px;
+        width: 85px;
+        font-size: 20px;
+    }
+
+    button {
+        height: 35px;
+        width: 70px;
+    }
+
+    button:hover {
+        height: 40px;
+        width: 80px;
+    }
+}
